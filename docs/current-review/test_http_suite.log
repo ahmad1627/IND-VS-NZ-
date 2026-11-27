@@ -1,0 +1,2 @@
+[Node Database] Initial game state prepared.
+PASS HTTP: signup/login; complete squad pools; team saves/readbacks; duplicate rejection; truthful live status; admin lock/scoring; stale revision rejected.

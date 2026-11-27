@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: missing key never calls provider
+ok 1 - missing key never calls provider
+  ---
+  duration_ms: 1.811469
+  type: 'test'
+  ...
+# Subtest: deduplicates concurrent requests, filters matches and falls back on provider error
+ok 2 - deduplicates concurrent requests, filters matches and falls back on provider error
+  ---
+  duration_ms: 10.666498
+  type: 'test'
+  ...
+# Subtest: invalid payload is unavailable, no retry storm
+ok 3 - invalid payload is unavailable, no retry storm
+  ---
+  duration_ms: 0.497343
+  type: 'test'
+  ...
+# Subtest: shared cache prevents duplicate calls across instances
+ok 4 - shared cache prevents duplicate calls across instances
+  ---
+  duration_ms: 10.151701
+  type: 'test'
+  ...
+# Subtest: Redis outage fails safely without consuming API quota
+ok 5 - Redis outage fails safely without consuming API quota
+  ---
+  duration_ms: 0.503033
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62.669108

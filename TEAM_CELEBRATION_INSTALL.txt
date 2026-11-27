@@ -1,0 +1,37 @@
+TEAM BUILDER SOUND + SUBMISSION CELEBRATION UPDATE
+
+The supplied original archive was already a valid ZIP file. This updated archive contains the full website source project.
+
+WHAT WAS ADDED
+- Add-player sound when a player is picked.
+- Remove-player sound when a selected player is removed (from the player list or pitch preview).
+- Success sound after the backend confirms the save.
+- Animated confirmation panel with the manager's registered full name, fantasy franchise name, match, and all 11 selected players.
+- Browser voice announcement: "Congratulations, [manager name]. Your fantasy team, [fantasy franchise name], has been successfully submitted for [match]."
+- A replay voice button if the browser blocks automatic speech.
+
+WHERE THE SOURCE FILES GO
+- frontend/src/App.jsx (updated)
+- frontend/src/index.css (updated)
+- frontend/src/components/TeamSubmissionCelebration.jsx (new file)
+- frontend/src/utils/fantasyAudio.js (new file)
+- frontend/src/App.test.jsx (updated test)
+
+INSTALL THE FULL UPDATED WEBSITE
+1. Extract this ZIP.
+2. The project folder is fantasy-cricket-fixed-3.1.0. Its root contains package.json, vercel.json, api/, backend/, and frontend/.
+3. Replace/update your source repository with this project folder's contents. Back up your current source and database first.
+4. For Vercel, keep the Vercel Root Directory set to the project root (the folder with vercel.json), NOT frontend/.
+5. Keep your existing server environment variables configured, then deploy/redeploy the project.
+
+INSTALL ONLY THE PATCH
+Extract the separate patch ZIP into the existing project root (the folder containing package.json and vercel.json). Preserve the folder paths and allow the five files above to be added/replaced. Then deploy/rebuild the project.
+
+IMPORTANT
+- Do NOT paste these React source files into frontend/public or directly into a site's public_html folder. They are source code and must be built/deployed by the React/Vite project.
+- No MP3/WAV files or extra sound assets are needed. Sounds are generated with Web Audio; speech uses the browser's text-to-speech feature.
+- Sound and speech depend on browser support and device sound settings. Some browsers may block automatic speech; use "Hear confirmation again" in the popup.
+- The animation appears only after the backend saves the team and the app reads it back to verify the 11 players and captain selections.
+
+TESTING NOTE
+Backend, persistence and production source checks passed (215 checks total). Source syntax parsing and audio/voice helper smoke tests passed. Frontend Vitest and Vite production build were not run because dependency installation timed out in this environment.

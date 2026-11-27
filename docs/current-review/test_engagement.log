@@ -1,0 +1,43 @@
+[Node Database] Initial game state prepared.
+PASS: Authentication required
+PASS: Existing team save with extracted rules
+PASS: Second real manager submission
+PASS: Shared server validator accepts valid XI
+PASS: Validator rejects duplicates
+PASS: Head-to-head cannot reveal prelock rival
+PASS: Even owner image export respects reveal cutoff
+PASS: Popularity hidden before cutoff
+PASS: Career profile private by default
+PASS: User can opt into public career
+PASS: Concurrent conflicting votes commit only once
+PASS: One vote persisted
+PASS: League join is idempotent
+PASS: Nonmember cannot read league or code
+PASS: League creation retry does not duplicate
+PASS: First snapshot does not invent rank movement
+PASS: Admin lock closes predictions
+PASS: Share allowed after lock
+PASS: Compare available after reveal
+PASS: Persisted rank movement follows actual score change
+PASS: Identical leaderboard read is idempotent
+PASS: Orphan team cannot appear as a manager
+PASS: Breakdown reconciles existing scorer with booster and captain
+PASS: Breakdown categories sum to official total
+PASS: Analytics serialization excludes email addresses
+PASS: Official prediction result unlocks badge
+PASS: Celebrations claimed once across concurrent tabs
+Dream Team cold milliseconds: 208
+PASS: Dream Team has exactly eleven distinct players
+PASS: Dream Team follows existing eligibility and composition
+PASS: Dream Team never changes submitted teams
+PASS: Dream Team deterministic cached result
+PASS: Only finalized player history included
+PASS: Popularity excludes orphan and deduplicates genuine teams
+PASS: Completed booster stays consumed
+PASS: Weekly rankings use real completed teams
+PASS: Snapshot restore retains engagement records
+PASS: Official result correction revokes invalid achievement
+PASS: Dream Team exact optimizer matches independent exhaustive oracle
+PASS: Read-only analytics preserve all game records
+PASS: Missing player history remains empty
+SUCCESS: 40 engagement integration assertions.

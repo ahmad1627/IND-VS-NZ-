@@ -1,0 +1,2 @@
+[Node Database] Initial game state prepared.
+PASS player management: authorization, server IDs, edits after saved teams, eligibility, active filtering, locked history, persistence round-trip, validation, conflicts, undo and 3X booster role.

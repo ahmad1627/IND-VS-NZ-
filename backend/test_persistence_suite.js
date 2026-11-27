@@ -1,0 +1,11 @@
+process.env.NODE_ENV='test';
+const assert=require('node:assert/strict');
+const db=require('../api/_lib/database');
+const original={schemaVersion:3,competition_id:'AUS_ENG_T20_2026',users:[{id:150,email:'test@example.test',hashed_password:'synthetic-hash',is_admin:true}],players:[{id:301,name:'Historical player'}],matches:[{id:1,title:'Historical fixture'}],standings:[],fantasyTeams:[{id:30,user_id:150,match_id:1,player_ids:[301],total_points:42}],playerMatchStats:[{match_id:1,player_id:301,runs:20}],nextUserId:151,nextTeamId:31};
+db.restore(original);
+assert.deepEqual(db.users,original.users);assert.equal(db.getPlayers().length,30);assert.equal(db.getMatches().length,1);assert.equal(db.fantasyTeams.length,0);
+assert.deepEqual(db.archivedCompetitions[0].fantasyTeams,original.fantasyTeams);assert.deepEqual(db.archivedCompetitions[0].playerMatchStats,original.playerMatchStats);
+assert.equal(db.nextUserId,151);const state=db.snapshot();db.restore(state);assert.deepEqual(db.snapshot(),state);
+assert.equal(db.archivedCompetitions.length,1);
+for(let id=1;id<=1;id++)assert.equal(db.getPlayersForMatch(id).length,30);
+console.log('PASS: account/password/admin preservation, historical archive, all player pools, idempotent restore.');

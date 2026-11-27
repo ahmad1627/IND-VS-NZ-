@@ -1,0 +1,20 @@
+PASS: dedicated fantasy team submission route exists
+PASS: server rejects teams other than exactly 11 players
+PASS: server enforces match-specific player eligibility
+PASS: server rejects players marked unavailable
+PASS: server provides optional one-time 3X and cancellation
+PASS: server enforces the national-team maximum
+PASS: server enforces all role minimums
+PASS: admin score recalculation applies all three multipliers
+PASS: finalizing one T20I advances the next unfinished fixture
+PASS: admin can update player availability after entries exist
+PASS: admin can edit unlocked match eligibility even after a fantasy team is saved
+PASS: admin protects players already used in a saved lineup from eligibility removal
+PASS: admin preserves historical rosters before applying future player edits
+PASS: admin prevents eligibility changes after an match selection deadline or saved scorecard
+PASS: admin endpoint validates player availability and match eligibility
+PASS: seeded players are not falsely marked as confirmed playing XI
+PASS: health endpoint explicitly reports that a live cricket feed is not connected
+PASS: series champion is crowned only after all configured fixtures are completed
+PASS: overall leaderboard shows the correct final match length
+SUCCESS: 19 production-path source checks (static checks; not a live server test).

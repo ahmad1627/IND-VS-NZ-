@@ -1,0 +1,41 @@
+{
+  "name": "aus-eng-t20-fantasy-2026",
+  "version": "3.1.0",
+  "description": "ACC Rising Stars Final fantasy cricket (Node.js, React and optional Python recommendations)",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "start": "node backend/server.js",
+    "dev:backend": "node backend/server.js --local",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm run build:frontend && node -e \"require('fs').cpSync('frontend/dist','dist',{recursive:true})\"",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "node backend/test_node_suite.js",
+    "test:persistence": "node backend/test_persistence_suite.js",
+    "vercel-build": "npm run build:frontend && node -e \"require('fs').cpSync('frontend/dist','dist',{recursive:true})\"",
+    "test": "npm run test:backend && npm run test:persistence && npm run test:production && npm run test:frontend && npm run test:http && npm run test:live && npm run test:power && npm run test:transactions && npm run test:engagement && npm run test:dev-startup && npm run test:players && npm run test:ai && npm run test:admin-reopen",
+    "setup:local": "node scripts/setup-local.js",
+    "test:production": "node backend/test_production_suite.js",
+    "test:frontend": "npm --prefix frontend test",
+    "test:http": "node backend/test_http_suite.js",
+    "test:live": "node --test backend/test_live_scores.js",
+    "test:power": "node backend/test_power_boosters.js",
+    "test:transactions": "node backend/test_transaction_suite.js",
+    "test:engagement": "node backend/test_engagement.js",
+    "test:dev-startup": "node frontend/test-dev-startup.mjs",
+    "test:players": "node backend/test_player_management.js",
+    "test:ai": "node backend/test_ai_recommendations.js",
+    "test:admin-reopen": "node backend/test_admin_reopen.js"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.39.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

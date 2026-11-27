@@ -1,0 +1,10 @@
+node_modules
+frontend/node_modules
+.env
+.env.*
+backend/data
+qa
+
+.env.local
+scripts/setup-local.js
+api/data

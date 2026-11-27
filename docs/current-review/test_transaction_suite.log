@@ -1,0 +1,3 @@
+[Node Database] Initial game state prepared.
+PASS: concurrent scoring + saves + reads, corrections, privacy, unavailable storage and lock contention.
+PASS: Redis-branch fault injection, failed apply/cancel rollback, lost write lease, retry, read-triggered lock commit and non-refund. Real Redis service not used.
